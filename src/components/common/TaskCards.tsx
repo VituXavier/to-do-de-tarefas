@@ -53,9 +53,9 @@ export default function TaskCard({ task }: TaskItemProps) {
   }
 
   function handleExitTask() {
-      if(task.state === TaskState.Creating){
-        deleteTask(task.id)
-      }
+    if(task.state === TaskState.Creating){
+      deleteTask(task.id)
+    }
 
     setIsEditing(false);
   }
@@ -79,7 +79,7 @@ export default function TaskCard({ task }: TaskItemProps) {
       >
         {!isEditing ? (
           <>
-            <div id="mamba" className="px-6 flex items-center justify-between">
+            <div  className="px-6 flex items-center justify-between">
               <div className="flex gap-2">
                 <Checkbox
                   value={task?.concluded?.toString()}
